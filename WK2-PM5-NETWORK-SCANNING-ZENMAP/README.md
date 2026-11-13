@@ -28,7 +28,6 @@ Zenmap was installed on my Windows PC from the official Nmap download page (http
 
 Ran `ipconfig` in Command Prompt to identify the local IP address and the subnet used for the scan.
 
-![ipconfig output](screenshots/02-ipconfig.jpg)
 
 | Item | Result |
 |---|---|
@@ -40,7 +39,6 @@ In Zenmap, I entered the subnet as the target and selected the **Ping scan** pro
 
 **Command:** `nmap -sn 192.168.56.1/24`
 
-![Nmap output](screenshots/03-nmap-output.jpg)
 
 | Item | Result |
 |---|---|
@@ -63,7 +61,6 @@ An earlier scan of the single address `192.168.56.1` (`nmap -sn 192.168.56.1`) a
 
 **Answer:** Nmap did not report a MAC address for the live host (Host Details shows MAC as "Not available"). A ping scan only reports a MAC address for hosts it discovers on the same Ethernet segment. A computer's own MAC address can be read with `ipconfig /all`.
 
-![Host details](screenshots/04-host-details.jpg)
 
 | Host Details field | Value |
 |---|---|
@@ -77,7 +74,6 @@ An earlier scan of the single address `192.168.56.1` (`nmap -sn 192.168.56.1`) a
 
 Opened the **Topology** tab, turned on the legend, and used **Save Graphic** to export the topology as a PDF.
 
-![Network topology](screenshots/05-topology.png)
 
 The topology shows **localhost** (the scanning machine) connected to **192.168.56.1**.
 
