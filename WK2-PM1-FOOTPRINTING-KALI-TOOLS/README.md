@@ -26,8 +26,6 @@ Footprint the live website `networkwalks.com` using six built-in Kali Linux tool
 
 **Command:** `whois networkwalks.com`
 
-![whois output, part 1](screenshots/01-whois-1.jpg)
-![whois output, part 2](screenshots/02-whois-2.jpg)
 
 | Field | Result |
 |---|---|
@@ -46,7 +44,6 @@ Footprint the live website `networkwalks.com` using six built-in Kali Linux tool
 
 **Command:** `whatweb networkwalks.com`
 
-![whatweb output](screenshots/03-whatweb.jpg)
 
 - `http://` returned **301 Moved Permanently** and redirected to `https://networkwalks.com/`.
 - Over HTTPS the site returned **200 OK**.
@@ -60,7 +57,6 @@ Footprint the live website `networkwalks.com` using six built-in Kali Linux tool
 
 **Command:** `nslookup networkwalks.com`
 
-![nslookup output](screenshots/04-nslookup.jpg)
 
 - The domain resolved to **192.232.216.135** (non-authoritative answer from resolver 172.20.10.1).
 - The tool then printed a communications timeout from the resolver. This was a local DNS issue and not a finding about the target.
@@ -71,7 +67,6 @@ Footprint the live website `networkwalks.com` using six built-in Kali Linux tool
 
 **Command:** `curl -I http://networkwalks.com`
 
-![curl output](screenshots/05-curl.jpg)
 
 | Header | Observation |
 |---|---|
@@ -86,9 +81,7 @@ Footprint the live website `networkwalks.com` using six built-in Kali Linux tool
 
 ### Task 5: WAF detection (wafw00f)
 
-**Command:** `wafw00f networkwalks.com`
-
-![wafw00f output](screenshots/06-wafw00f.jpg)
+**Command:** `wafw00f 
 
 - Result: the site is behind **ModSecurity (SpiderLabs)** WAF, detected in 2 requests.
 
@@ -98,7 +91,6 @@ Footprint the live website `networkwalks.com` using six built-in Kali Linux tool
 
 **Command:** `dnsrecon -d networkwalks.com`
 
-![dnsrecon output](screenshots/07-dnsrecon.jpg)
 
 | Record | Value |
 |---|---|
